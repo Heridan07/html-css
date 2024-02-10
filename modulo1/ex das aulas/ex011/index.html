@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.curso.ico" type="image/x-icon">
+    <title>Trabalhando com Mídias</title>
+</head>
+<body>
+    <h1>Imagens que se adaptam sozinhas</h1>
+    <p>Você tem que adaptar as imagens do seu site para os diversos tipos de aparelhos: celular, tablet e PC, para isso você deve gerar tamanhos diferentes da mesma imagen que se adaptem a cada tipo de aparelho Ex de tamanho: 300x300 para celular, 700x700 para tablet, 1000x1000 para PC. è melho modificar o tamanho da imagem com um programa de edição, pois assim você dominui o tamanho do arquivo, favorecendo a existência de um site mais rápido, se você mudar somente cm css o tamanho permanece. Existem tags nas quais colocamos a mesma imagen em tamanhos diferentes, e essa tag mostra uma única versão da imagen de acordo com o tamanho da tela do aparelho.</p>
+    <h2>A tag &lt;Picture&gt;</h2>
+    <p>Essa tag tem uma tag <abbr title="tag &lt;img&gt;">imagem</abbr> dentro dela, mas ela permite que criemos várias fontes(fizemos três imagens com o gimp de tamanhos diferentes, essas três imagens serão as fontes).Passo a passo:primeiro você irá cirar a tag img dentro da picture em src, você vai colocar ou a menor imagem de todas ou a maior imagem de todas, nunca a média, vamos começar pela maior que intirulamos de g.</p>
+    
+    <pre>
+        <code>
+            &lt;picture&gt;
+                <mark>&lt;source media="(max-widht:1050px)" srcset="imagens/foto.media.png" type="image/png"&gt;</mark>
+                &lt;img src="imagens/foto.grande" alt=""&gt;
+            &lt;Picture&gt;
+        </code>  
+    </pre>
+    <p>Acima da tag com a imagem maior vamos ter a tag source do tipo media type, dentro dessa tag temos alguns parâmetros, o type nos diz que é uma foto png, o srcset localiza a proxima foto que deve ser aberta de acordo com o tamanho da tela do aplicativo que a imagem esteja e a última a  media="(max-widht:1050px)" ela vem assim media="(min-widht:1050px)", widht significa largura, ele vem com largur minima mas é melhor trabalhar com maxima </p>
+    <p>Por padrão o navegador vai abia imagem grande, mas o source estabelece uma condição, no caso está dizendo que se o navegador tiver menos de 1050<sup>px</sup> a imagem media será aberta no lugar da grande </p>
+    <p>Colocamos 50px a mais pois é a largura da barra de rolagem, fazend isso ela não vai aparecer.</p>
+    <p>IMAGEM PEQUENA:</p>
+    <p>Coloque acima da grande a pequena em outra tag source.</p>
+    <pre>
+        &lt;picture&gt;
+            &lt;source media="(max-widht:750px)" srcset="imagens/foto.pequena.png" type="image/png"&gt;
+            <mark>&lt;source media="(max-widht:1050px)" srcset="imagens/foto.media.png" type="image/png"&gt;</mark>
+            &lt;img src="imagens/foto.grande" alt=""&gt;
+        &lt;Picture&gt;   
+    </pre>
+    <h2>Usando as imagens</h2>
+    <p>Veja a aplicação dessasa tags na imagem abaixo</p>
+    <picture>
+        <source media="(max-width:750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <hr>
+    <h1>Colocando aúdio no seu site</h1>
+    <p>Baixando músicas gratuitas para colocar no site. Vá no seu canal do Youtube-painel de controle-youtube studio-biblioteca de audio, em atribuição coloque em atribuição não necessária(assim tu não precisa colocar a atribuição etc). </p>
+    <p>Para colocar o áudio temos duas formas:
+    <h2>Tag audio sem modificação</h2>
+    <audio src="media/The Black Cat - Aaron Kenny.mp3" controls autoplay loop></audio>
+
+    <p>Para fazer essa caixa de audio acima usamos o seguinte código:</p>
+        <code>&lt;audio src="media/The Black Cat - Aaron Kenny.mp3" <mark>controls autoplay loop</mark>>&lt;/audio&gt;</code>
+
+    
+    <p>O atributo controls vai apresentar o player na tela. Caso não seja colocado na tag, o controle será transparente e o usuário não poderá interagir com ele. O atributo autoplay, quando inserido, vai iniciar a reprodução do áudio assim que a página for carregada.O atributo loop vai fazer com que o áudio seja repetido eternamente assim que terminar a sua reprodução</p>
+    <p>Existem três parâmetros: control, autoplay e loop que devem ser acrescentados, mas infelizmente do tipo de arquivo ao qual se referem MP3 OGG ou WAv, nem sempre são total ou parcialmente compativeis com todos os navegadores/computadores, ás vezes o parâmetro autoplay não funciona e para a música pegar você tem que clicar no botão de play.</p>
+    <p>Devido a essa questão de compatíbilidade nós vamos usar a outra técnica de adicionr áudio que será com source.</p>
+    <h2>Tag áudio com source</h2>
+    <p>Vamou o usar a tag audio e depois dentro dela colocar a tag <strong>"source src"</strong> para adicionar o áudio:</p>
+    <pre>
+        <code>
+            &lt;audio&gt;
+            &lt;source src="" type=""&gt;
+            &lt;/audio&gt;
+        </code>
+    </pre>
+    <p>em src vamos adiciona o arquivo de audio e em type vamos dizer o tipo. Ex:</p>
+
+    <pre>
+        <code>
+            &lt;audio&gt;
+            &lt;source src=""media/The Black Cat - Aaron Kenny.mp3"" type="audio/mpeg"&gt;
+            &lt;/audio&gt;
+        </code>
+    </pre>
+    <p>Obs: mpeg quer dizer que o tipo de arquivo é mp3</p>
+    <h3>Continuando</h3>
+    vamos adicionar os outros tipo possíveis de arquivo:
+    <pre>
+        <code>
+            &lt;audio&gt;
+            &lt;source src=""media/The Black Cat - Aaron Kenny.mp3"" type="audio/mpeg"&gt;
+            &lt;source src=""media/The Black Cat - Aaron Kenny.ogg"" type="audio/ogg"&gt;
+            &lt;source src=""media/The Black Cat - Aaron Kenny.wav"" type="audio/wav"&gt;
+            &lt;/audio&gt;
+        </code>
+    </pre>
+    <p>A ordem é extremamente importante(Neste caso o programa Lê de cima para baixo), primeiro vai tentar carregar a mídia mp3, depois ogg e por último a wav, é importante deixar a wav por último pois ela é muito pesada.</p>
+    <p>Se no caso do navegador não ser compatível com nenhum deles vamos criar um parágrafo com uma mensagem dizendo "infelizmente seu navegador não consegue reproduzir áudio" e um link "Clique aqui para baixar o arquio MP3"</p>
+
+    <pre>
+        <code>
+            &lt;audio <strong>preload="metadata"</strong>control autoplay loop&gt;
+            &lt;source src=""media/The Black Cat - Aaron Kenny.mp3"" type="audio/mpeg"&gt;
+            &lt;source src=""media/The Black Cat - Aaron Kenny.ogg"" type="audio/ogg"&gt;
+            &lt;source src=""media/The Black Cat - Aaron Kenny.wav"" type="audio/wav"&gt;
+            &lt;/audio&gt;
+            &lt;p&gt;infelizmente seu navegador não consegue reproduzir áudio &lt;a href="media/The Black Cat - Aaron Kenny.mp3">Clique aqui para baixar o arquio MP3&lt;/a&gt;&lt;/p&gt;
+        </code>
+    </pre>
+    <p>Repare que  na tag audio além dos parâmetros basicos, temosum lovo chamado preload, que tem tres opções: auto, metadata e none,  </p>
+    <p><strong><abbr title="preload='auto'">1-AUTO</abbr></strong> só considera que o site terminou de carregar quando carrega o audio todo, a depender pode ser perigoso pois se for audio de podcast pode ser muito pesado e o site vai demorar de carregar então não coloque auto</p>
+    <p><ins>2-NONE-Não carrega nada, só se o usuário cliclar em play pra tocar o áudio.</ins></p>
+    <p>3-METADATA=<strong>RECOMENDADO-Carrega nomes e informações</strong></p>
+    <h3>Aplicando a tag audio com source na prática</h3>
+    <audio preload="metadata" controls autoplay loop>
+        <source src="media/The Black Cat - Aaron Kenny.mp3" type="audio/mpeg">
+        <source src="media/The-Black-Cat-Aaron-Kennyyy (1).ogg" type="audio/ogg">
+        <source src="media/The-Black-Cat-Aaron-Kenny.wav" type="audio/wav">
+        <p>Infelizmente o seu navegador não é capaz de reproduzir áudio <a href="media/The Black Cat - Aaron Kenny.mp3">Clique aqui para baixar o arquivo MP3.</a></p>
+    </audio>
+
+    <p>OBS: Tente não carregar áudios WAV, pois são muito pesados, se for em site para baixar áudio aí faz sentido, mas se for site de navegação atrapalha pois é pesado demais.</p>
+</body>
+</html>

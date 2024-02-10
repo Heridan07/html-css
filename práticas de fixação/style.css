@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+body{
+    background-image: linear-gradient(to top,#ADE25D,#FF70A6);
+    background-attachment:fixed;
+}
+
+main{
+    background-color: #eae9dc;
+    padding: 7px;
+    border-radius: 5px;
+}

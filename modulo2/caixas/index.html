@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Box-model</title>
+</head>
+<body>
+     
+    <header id="cabeçalho1">
+        <h1 id="titulo1">Box Model</h1>
+    </header>
+
+    <main id="main1">
+        <div id="div1">
+            <p>Todo elemento visual dentro de uma página é uma caixa, um parágrafo um título uma div etc.</p>
+            <h2>Elementos</h2>
+            <h3>Medidas: altura= height, largura = width.</h3>
+            <h2>Estrutura:</h2>
+            <p>conteúdo -> padding (espaço entre o conteúdo e a borda) -> border -> margem (Espaço entre a borda de uma caixa e algum outro elemento)-> outline (entre a borda e a margem).</p>
+            <h2>Tipos de caixa:</h2>
+            <h3>Box-level</h3>
+            <p>Sempre inicia na proxima linha e ocupa a largura total da tela (é sempre 100 por cento), ex:</p>
+            <p><ol >
+                <li>div</li>
+                <li>h1-h6</li>
+                <li>main</li>
+                <li>header</li>
+                <li>nav</li>
+                <li>article</li>
+                <li>aside</li>
+                <li>footer</li>
+                <li>form</li>
+                <li>video</li>
+            </ol></p>
+            <h3>Inline-level</h3>
+            <p>Pula para o lado da linha, não a quebra, ele fica dentro dela, não ocupa o tamnaho inteiro da tela, ex:</p>
+            <p><ol>
+                <li>span</li>
+                <li>a</li>
+                <li>code</li>
+                <li>small</li>
+                <li>strong</li>
+                <li>em</li>
+                <li>sup e sub</li>
+                <li>label</li>
+                <li>button</li>
+                <li>input</li>
+                <li>select</li>
+            </ol></p>
+            <hr>
+
+            <h2>Formas de utilizar o padding:</h2>
+            <h3>1ª)</h3>
+            <pre>
+                padding:10px;
+            </pre>
+            <p>Todos s lados ficam com padding 10px.</p>
+
+            <h3>2ª)</h3>
+            <pre>
+                paddind top:10px;
+                padding-right:10px;
+                padding-bottom:10px;
+                padding-left:15px;
+                
+
+            </pre>
+            <p>Todos os lados são configurados individualmente, tem que ser configurados no sentido horário.</p>
+            <h3>3ª)</h3>
+            <pre>
+                padding:10px 15px 7px 8px;
+
+            </pre>
+            <p>Um shorthand cada configuração segue a ordem top - right- bottom e left.</p>
+
+            <p><strong>Obs: Essas relações também se aplicam a marin, border e outline.</strong></p>
+
+            <hr>
+
+            <h2>Sobre a margem</h2>
+            <p>Sempre que quiser centralizar uma caixa ou uma div é só colocar <Code>"margin:auto;"</Code></p>
+
+            <p>se quiser centralizar só a largura coloque por exemplo: <code>"margin: 10px auto 20px auto;".</code></p>
+
+            <hr>
+
+            <h2>Outline</h2>
+
+            <h3 id="exemplo">Exemplo</h3>
+
+            <p>Esse tracejado em azul é o outline, que está circundando a borda, o outiline fica dentro da margem e pode ultrapassar os limites dela dentro de uma div, mas não aumenta nem diminui a margem.</p>
+
+            <hr>
+
+            <h2>OBSERVAÇÃO:</h2>
+            <p>No dev tolls as caixas d tipo box-level são chamadas de <strong>display:block</strong> e as inline level de <strong>display:inline</strong>. Se quiser trasformar uma caixa box level para inline level é só fazer isso:</p>
+            <pre>
+                h1{
+                    display:inline;
+                }
+            </pre>
+            <p>Trasnformamos o h1 que é box-level em inline-level através da declaração display, quando realizamos essas trasnformação não podemos mais alterar o width  o height.</p>
+            <p>Podemos fazer o inverso também colocoando: <code>display:block;</code> </p>
+            <p>Podemos fazer com que uma caixa inline-level também adiquira características de box level através da declaração: <code>display:inline-block</code>, assim você pode mecher no tamanho, altura e largura.</p>
+            <hr>
+
+            <h2>Coisas sobre box-shadow:</h2>
+            <pre>
+                box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.485);
+            </pre>
+
+            <p>se colocar um inset é criada uma sombra interna</p>
+            <hr>
+            <h2>Vertices arredondados</h2>
+
+            <div id="bola">
+                <p>Gay</p>
+            </div>
+
+
+        </div>
+    </main>
+
+    <header id="cabeçalho2">
+        <h1 id="titulo2">Grouping Tags</h1>
+
+    </header>
+    <main id="main2">
+        <div id="div2">
+            <h2>O que são</h2>
+            
+            <p>As grouping tags são divs semanticas, antigamente para fazer um site era criado varias divs com ids identificando funções como cabeçalho etc agora há divs com nomes destinadas a essas funções como header, main e footer, ex:</p>
+            <pre>
+                &lt;header&gt;
+                    &lt;nav&gt;
+                        &lt;a href="#"&gt;Link&lt;/a&gt;
+
+                    &lt;/nav&gt;
+
+                &lt;/header&gt;
+                &lt;main&gt;
+                    &lt;section&gt;
+                        &lt;article&gt;
+                            &lt;h2&gt;Noticias&lt;/h2&gt;
+                            &lt;p&gt;
+                                huhuhuhuhu
+                            &lt;/p&gt;
+                        &lt;/article &gt;
+                        &lt;aside&gt;
+                            &lt;p&gt;Artigo escrito por###&lt;/p&gt;
+                        &lt;/aside&gt;
+                    &lt;/section&gt;
+                &lt;/main &gt;
+            </pre>
+            <p>Dentro de uma sessão temso um atigo (article) e mo artigo temos uma aside qeue é um conteúdo paralelo, nav é o menu de navegação.</p>
+
+        </div>
+       
+    </main>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.curso.ico" type="image/x-icon">
+    <title>Aula Dezesseis á Dezenove</title>
+</head>
+<body>
+    <div id="caixa1">
+        <h1 class="cabeçalho">Aula Dezesseis á Dezenove</h1>
+    </div>
+    <main>
+        <div id="caixa2">
+
+            <h2>1ª) Criar gradiente de cor:</h2>
+            <p><code>background-image: linear-gradient(to top,rgb(252, 214, 220),rgb(215, 174, 215));</code></p>
+            <p>Talvez seja necessário criar um seletor universal com essa declaração:</p>
+            <pre>
+        *{
+
+            height: 100%;
+
+        }
+            </pre>
+            <p>Dessa forma se o degrade for de cima para baixo o site não ficará zebrado, mas talvez esse metodo não funcione, caso isso ocorra use o <code>background-attachment: fixed;</code>: </p>
+
+            <pre>
+                main{
+
+                    background-image: linear-gradient(to top,rgb(252, 214, 220),rgb(215, 174, 215));
+                    background-attachment: fixed;
+                    
+                }
+        </pre>
+        <h2>2ª) Sombra na caixa:</h2>
+        <pre>
+            box-shadow: 5px 5px 10px , blue;
+        </pre>
+        <p>O primeiro parametro é quanto você quer que a sombra vai andar para direita, o segundo é quanto ela vai para baixo</p>
+ o terceiro é quanto ela vai se espalhar, o último é a transparência e a cor dela.
+        <h2>3ª)Peso da fonte:</h2>
+        <code>font-weight:;</code>
+        <p>Podem ser literais: lighter, normal,bold e bolder.</p>
+        <p>Podem ser númericas: vão de 100 á 900.</p>
+
+        <p><b>OBS: Nem todas as fontes suportam todos os tipos de peso.</b></p>
+        <h2>4ª) Propriedade Shorthand:</h2>
+        <p>Quando queremos resumir um conjunto configurações uma única linha, para isso é necessario que pertençam ao mesmo tipo de configuração, ex configurações relacionadas a font:</p>
+        <pre>
+            main{
+                font-family: 'Work Sans' sans-serif;
+                font-weight: bolder;
+                font-size: 3em;
+                font-styke:italic;
+            }
+        </pre>
+        <p>Para colocar em uma única linha as confiurações de fonte é necessário seguir uma ordem de precedência: primeiro colocamos o style depois vem weight, size e family, ex:</p>
+        <code>font:italic bolder 3em 'Work Sans', 'sans-serif';</code>
+
+        <h2>5ª) Alinhamento de texto:</h2>
+        <h3>Alinhar a esquerda ou direita</h3>
+        <p><code>text-align:left;</code></p>
+        <h3>Centralizar</h3>
+        <p><code>text-align:center;</code></p>
+        <h3>Justificar</h3>
+        <p><code>text-align:justify;</code></p>
+        <h3>Recuo de paragráfo:</h3>
+        <p><code>text-indent:20px;</code></p>
+        
+        </div>
+        
+
+    </main>
+    <footer>
+        <p>Endereço:</p>
+        <a href="http://">Centro de abastecimento de Paripe, loja: box22.</a>
+
+
+    </footer>
+</body>
+</html>

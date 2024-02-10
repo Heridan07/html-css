@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Open+Sans:wght@300&display=swap');
+
+@font-face {
+    font-family:'Baby'; /*Você vai dar o nome da vonte depois de importar ela no seu arquivo HTML através do scr*/
+    src: url("Baby\ Darling.ttf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    /*
+    Tipos de format:
+    1-opentye = geralmente usado para fontes otf
+    2-truetype = geralmente usado para fontes ttf
+    3- embedded-opentype
+    4-truetype-aat (Apple Advanced Typography
+    5-svg
+    
+    */
+}
+body{
+  margin: auto;
+}
+
+.cabeçalho{
+    font-family: 'Baby';
+    font-size:50px;
+}
+
+#caixa1{
+    text-align: center;
+    background-image:linear-gradient(#ffe096,#f6e6c1)  ;
+    padding: 10px;
+}
+
+main{
+    background-image: linear-gradient(to top,rgb(252, 214, 220),rgb(215, 174, 215));
+
+    background-attachment: fixed;
+    height: auto;
+    padding: 10px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+footer{
+    background-color: rgb(252, 231, 231);
+    padding: 10px;
+    font-family: Helvetica, sans-serif;
+    height: 150px;
+    
+    
+}
+
+#caixa2{
+    background-color: rgb(245, 245, 233);
+    border-radius: 7px;
+    padding: 10px ;
+    font-weight: 500;
+    
+}
+

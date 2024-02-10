@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.curso.ico" type="image/x-icon">
+    <title>Formatação de textos</title>
+    <style>
+        mark {
+            background-color:coral ;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito</h2>
+    <p>Nessa frase temos um termo em negrito usando a tag <b>&lt;b&gt;</b> que não é semântica, logo é melhor evitar e outra em destaque usando a tag <strong>&lt;strong&gt;</strong>   que é semântica logo use. </p>
+    <hr>
+    <h2>Itálico / Ênfase</h2>
+    <p>Nesta frase, temos <i>um termo em itálico </i> usando a tag "i" (não semântica).</p>
+    <p>Nesta <em>temos um termo em ênfase</em> usando a tag "em" (semântica) que significa ênfase.</p>
+    <hr>
+    <h2>Observações</h2>
+    <h3>Primeira</h3>
+    <p>Esqueça as palavras ítalico e negrito quando estamos em HTML, o correto será falar ênfase e destaque, ítalico e negrito remetem mais a forma e isso nós vamos ver só em CSS.</p>
+    <h3>Segunda</h3>
+    <p>Atalho no <strong>VScode</strong> (editor que estamos usando para fazer o arquivo HTML): Se quiser envelopar palavras ou frazes nas tags selecione elas com o mouse, depois utilize <strong>ctrl+shift+P</strong>, procure <strong>wrap with abreviation</strong>, pressione enter, digite a tag que quer e pressione enter novamente, assim você vai envelopar a tag mais rapidamente do que ficar arrastando as frases/palavras para dentro das tags.</p>
+    <hr>
+    <h1>Continuando</h1>
+    <h2>Texto marcado</h2>
+    <p>Podemos criar <mark>um texto marcado</mark> usando a tag Mark</p>
+    <p>A cor padrão é amarelo, em HTML você não tem uma maneira de mudar a cor, você vai ter que usar <strong>CSS</strong> dentro de html através do parâmetro Style. Ex:<mark style="background-color:coral;"> mark style="background-color:blue;" </mark></p>
+    <p>Mas se você quiser colocar outra palavra marcada você vai ter a cor amarela padrão, para mudar isso você vai em HEAD e vai usar a tag style(uma tag css) dentro da tag style vai usar o usar o seletor mark e colocar a cor que quer, isso vai mudara cor padrão da tag mark, no caso coloquei a cor padrão para laranja</p>
+    <h2>Texto grande e pequeno</h2>
+    <p>Estamos criando um <big>texto grande</big> com a tag BIG e um <small>texto pequeno</small> com a tag SMALL</p>
+    <p>A tag BIG se tornou absoleta pois não dá para atribuir sgnificado, já SMALL ainda se mantêm, pois há contratos que por exemplo pedem para que você leia as letras pequenas, então ainda há sentido em usar ela(É um palpite).</p>
+    <h2>Texto Deletado</h2>
+    <p>Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido, mas não considerado, usando a tag <strong>DEL</strong>.</p>
+    <h2>Texto Inserido</h2>
+    <p>Podemos marcar <ins>um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois com a tag <strong>INS</strong>, tem a tag u mas alem de não ser semântica ela tbm está absoleta.</p>
+    <h2>Texto sobrescrito</h2>
+    <p>Pra inserir coisas do tipo x20+3(x elevado a 20), usamos a tag SUP. Fica assim: x<sup>20</sup>+3.</p>
+    <h2>Texto subscrito</h2>
+    <p>Para escrever coisas do tipo H2O(no caso o dois fica mais para baixo), usamos a tag sub. Fica assim: H<sub>2</sub>O.</p>
+
+    
+</body>
+</html>

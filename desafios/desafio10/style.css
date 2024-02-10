@@ -1,0 +1,307 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100&family=Open+Sans:wght@300&display=swap');
+
+
+@font-face {
+    font-family:'Android' ;
+    src: url("fontes/idroid.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+:root{
+
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android:'Android', sans-serif;
+}
+
+*{ /*é o seletor global, toda a configurçaõ dentro dele vai valer para todos os elementos*/
+    margin:0px;
+    padding: 0px;
+}
+
+
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    
+}
+
+a.externo::after{
+
+    content: '\00A0\1F517';
+
+}
+
+
+header{
+   
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    text-align: center;
+    padding-top: 40px;
+    min-height: 150px;
+   
+}
+
+header > h1{
+    color: white;
+    margin-bottom: 20px;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;/*O peso dos títulos (h1,h2 etc) por padrão é bold, então colocams no normal*/
+    text-shadow:2px 2px 0px rgba(0, 0, 0, 0.268);
+}
+
+header > p{
+    color: white;
+    text-align: center;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 500px;/*Quando você estabelece uma largura maxima você transforma o p em um bloco dentro do header, para centralizar deve colocar a margem automática*/
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    text-shadow:2px 2px 0px rgba(0, 0, 0, 0.175);
+}
+
+
+main{
+    background-color: white;
+    min-width: 270px; /*largura mámixa da tela de celulares antigos quando está em pé, isso vai fazer o conteúo ocupar até essa largura minima*/
+    max-width: 1000px;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    
+}
+
+main p{
+    text-align: justify;
+    text-indent: 30px;
+    margin:15px 0px; /*Se colocar assim é como se estive colocando 15px 0px 15px 0px, ou seja, configurou o bottom e o left também, formou um par de configuração.*/
+    line-height: 2em;/*a altura da linha, quanto tem de espaço entre uma linha e outra.*/
+    font-size: 1em;
+    
+}
+
+nav{
+    background-color: var(--cor5);
+    box-shadow:0px 7px 7px rgba(0, 0, 0, 0.243) ;
+    padding: 10px;
+    text-align: left;
+}
+
+nav>a{
+    color: var(--cor0);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: 0.2s; /*Quando passa o mouse por cima de um link para outro gera uma transição.*/
+
+}
+
+nav>a:hover{
+    background-color: var(--cor3) ;
+    color: var(--cor5);
+}
+
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color:var(--cor5);
+    background-color:var(--cor1) ;
+    padding: 2px 6px;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: var(--cor4);
+}
+
+
+main img{
+    width: 100%; /*Se fizermos isso as imagens não irão vazar para fora do conteúdo irão ocupar a largura máxima da div em que estiverem contidas, se a imagem for grande ela vai sendo reduzida automaticamente, a depender pode projudicar a vizualização, emtão poder necessário construir um outro tipo de imagm da mesma que substitua a atual a depender do tamanho da tela*/
+    display: block;
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block; /*tem que colocar esse display senão não irá centralizae, já que imagens por padrãoo não são blocos*/
+    margin: auto;
+}
+
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+ 
+main h2{
+    color: black;
+    text-align: left;
+    font-family: var(--fonte-android);
+    background-image: linear-gradient(to right, var(--cor1), transparent); /*Vai fazer um degrade da cor até transparente*/
+    text-indent: 8px;
+    font-weight: normal;
+   
+}
+
+main h3{
+color: white;
+}
+
+
+
+
+#video{
+
+    background-color: green;
+    border-style: solid;
+}
+
+aside{
+
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.252);
+
+}
+
+aside > ul{
+
+    list-style-type: '\2714';
+    list-style-position: inside; /*isso coloca o estilo da lista (as bolinhas) para dentro, o padrão de configuração é outside(para fora).*/
+    columns: 2; /*Divide um conteúdo em duas colunas*/
+    
+}
+ 
+aside > h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    border-radius: 10px 10px 0px 0px;
+    padding:10px;
+    margin: -10px -10px 0px -10px;/*quando queremos que a margem de uma caixa vaze para fora da de outra caixa colocamos números negativos*/
+
+}
+
+footer{
+
+    background-color: var(--cor5);
+    color: white; 
+    text-align: center;
+    font-size:0.8em;
+    padding: 5px;
+   
+}
+
+footer > p > a{ /*no caso estamos pegando o a que está dentro do p em footer, fazemos assim um caminho, mas nesse caso dá para colocar "footer a{}", que também funciona, já que está dizendo para pegar qualquer a dentro de footer independente de estar dentro de outra tag ou não.*/
+    color:white;
+    text-decoration: none;
+}
+
+footer > p > a:hover{
+    text-decoration:underline;
+    color: var(--cor1);
+
+}
+
+/*COMO CENTRALIZAR O VÍDEO NO SITE*/
+
+/*Primeiro vamos configurar a div que o vídeo está*/
+div.video{
+
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 60%;/*CONFIGURAÇÃO PARA TIRAR BARRAR PRETAS LATERAIS DO VÍDEO DO YOUTUBE*/
+    position: relative;/*OBRIGATÓRIO DE TER*/
+}
+
+/*Agora vamos configurar o iframe (que é o vídeo em si)*/
+div.video > iframe{
+    position: absolute;/*OBRIGATÓRIO DE TER*/
+    top: 5%;
+    left: 5%;
+    width: 90%;/*OCUPAÇÃO DA LARGURA TOTAL DO VÍDEO DENTRO DA DIV*/
+    height: 90%;/*OCUPAÇÃO DA ALTURA TOTAL DO VÍDEO DENTRO DA DIV*/
+}
+
+
+
+
+/*
+
+
+Cores do site:
+#c5ebd6
+#83e1ad
+#3ddc84
+#2faa866
+#1a5c37
+#063d1e
+
+Variáveis:
+
+Existe uma pseudoclasse chamada root no css, dentro dela você vai declarar a sua variável ou um conjunto de variáveis.
+
+EX:
+
+:root{
+    --cor0: #ebe5c5
+}
+
+rida variável em css começa com "--" seguido do nome e o valor que irá receber separados por ":", no caso a variável --cor0 recebe a cor ebe5c5, então quando você for usar o background-color você vai colocar a variável-
+
+background-color: var(--cor0);
+
+podemos criar variáveis para outras coisas como fontes-
+
+:root{
+
+    --font-padrao: Arial,Verdana, Helvetica,sans-serif;
+    --font-android: 'Android',cursive;
+}
+obs- colocamos várias fontes e a sans-serif no final, que é uma generica, se nada funcionar essa generica é ativada, sempre colocamos uma genereico no final.
+
+font-family: var(--fonte-padra);
+*/
+
+/*OBS- se precisar achar o caminho de uma pasta, mas está em outra é  só colocar dois pontos um ponto simboliza a pasta atual, o segundo está pedindo para voltar uma pasta, aí tu coloca o nome da pasta atual que é para entrar ex: src: url("..fontes/idroid.otf")
+
+*/
+
+
+/*
+
+OBSERVAÇÃO IMPORTANTE-
+
+Quando colocamos por exemplo "main>p{}" é diferente de "main p{}". main>p é um p dentro de main, mas ás vezes esse p está dentro de um article ou outra tag dentro demain, então colocar main >p não funciona, no caso então o certo seria colocar "main p" sem o ">", assim você está dizendo que quer configurar todos os p dentro de main independente de onde esteja, independente de estar aninhado em outra tag ou solto main mesmo.
+
+*/
+
+
+/*Para mudar o estilo da lista pegue o unicide do emogi e coloque entre aspas no list-style- type '2714' depois coloque um "\" = '\2714' , se quiser um espaço entre o estilo e o conteudo da lista coloque outra contra barra e digite "00A0" (que representa o espaço sem quebra chamdo de nbsp(non-breaking space)), pode colocar dois se quiser. NO final fica assim o código-  
+
+"list-style-type: '\2714\00A0\00A0';" */

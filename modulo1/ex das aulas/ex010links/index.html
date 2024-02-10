@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.curso.ico" type="image/x-icon">
+    <title>Trabalhando com links</title>
+    <style>
+        mark{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudo sobre Links</h1>
+    <h2>Links Externos</h2>
+    <p>Vai apontar para outro site que não é nosso, usamos a tag "A"(âncora) dentro da tag vai ter o parâmetro href(referência a hipertexto, pra onde o site vai), nele tu coloca a url do site.</p>
+    <p>Ex: Você pode acessar o <a href="https://gustavoguanabara.github.io/">repositório do Github</a></p>
+    <p>Ex:Você pode acessar também o meu <a href="https://youtube.vom/cursoemvideo/">canal do youtube</a>.</p>
+    <p>Repare que  ao clicar no link externo, a sua página some, para evitar isso use os parâmentros: target="_blank"(Que faz a página abrir em outra guia) e rel="external". Observe o que acontece agora: <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório do Github</a>. Uma nova aba se abre e sua página se mantêm.</p>
+    <p>Então, se você vai abrir um site que não é seu, é recomendado que você abrar em outra aba.</p>
+    <hr>
+    <h2>Links Internos</h2>
+    <p>Link que faz uma ligação com uma página dentro do nosso servidor e diz repeito a nossa própria página.</p>
+    <p>Dentro do arquivo HTML você cria uma segunda página. Usamos a tag "A" nesse caso também, dentro do parâmetro href aperte ctrl+space e selecione a página.</p>
+    <p>Vamos fazer um link para ela. </p>
+    <p><a href="pag002.html">Segunda página</a></p>
+    <p><mark>OBS:Nos links externos usamos o parâmetro rel="external", já nos links internos, na página principal usamos rel="next"(próximo) pq estamos dizendo que é um link para a proxima pagina e na segunda página usamos o rel="prev"(anterior), pq estamos dizendo que é um link para voltar para alguma página anterior. Isso ajuda o mecansimo de busca a encontrar sua página com mais facilidade.</mark></p>
+
+    <p><strong>OBS: Nos links internos não usamos a target="_blank" pois não queremos abrir oura guia no navegador, queremos abrir ma propria guia aberta a nossa próxima página, então usamos o target= "_self" para indicar para o google que a página vai abrir na prória aba.</strong></p>
+    <h2>Links Internos com caminhos</h2>
+    <p>Vamos criar uma pasta dentro da pasta html, vamos colocar o nome dela de página de nóticas.</p>
+    
+    <h2>Links internos com caminhos</h2>
+    <p>Você pode acessar nossa <a href="noticias/pag003.html" rel="next">página de notícias</a>.</p>
+    <p>Quando você cria uma pasta dentro do arquivo HTML você cria um caminho, então você não coloca diretamente o nome do arquivo html dentro da pasta você tem que procurar o nome da pasta, selecionar ou escrever e depois selecionar ou escrever o nome do arquivo que você quer entrar(depois do "/").</p>
+    <hr>
+    <h1>Links para Downloads</h1>
+    <ul>
+        <li><a href="livro/Texto 1 Tourinho Behaviorismo ontem e hoje.pdf" download="livro/Texto 1 Tourinho Behaviorismo ontem e hoje.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/TeTourinho Behaviorismo.zip" download="livro/TeTourinho Behaviorismo.zip" type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+    <p>Para baixar você coloca dois parâmentros: Download="nome do arquivo"(para sinalizar que é um arquivo para baixar) e type="application/pdf"(tem varios applications para casos especificos).</p>
+    <p>A depender do navegador o arquivo em pdf não vai baixar e sim abrir na guia, mas se clicar com o botão direito e clikar em salvar como ele salva o no seu computador.</p>
+    <p><ins>OBS:Quando não tiver arquivo coloque no href um # para simbolizar que o arquivo está vazio.</ins></p>
+    <p><em>OBS:É bom transformar o arquivo em ZIP pq diminui o tamanho dele.</em></p>
+    <p>OBS:Site iana.org vai dar todas os type media necessários para pedir para o google baixar o arquivo do link criado.</p>
+</body>
+</html>

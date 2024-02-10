@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.curso.ico" type="image/x-icon">
+    <title>Estilos locais/Internos</title>
+    <style>
+        body{
+            background-color: rgb(171, 212, 212);
+        } 
+
+        p{
+            font-family: sans-serif;
+            text-align: justify;
+        }
+
+        h3{
+            font-family: Arial, Helvetica, sans-serif;
+    
+        }
+    </style>
+</head>
+<body>
+    <h1>Estilos Locais / Internos de Css</h1>
+    <p>É quando usamos css na parte Head do HTML, trabalhos no head na forma que realmente se trabalha em css. Usamos os seletores que tem o nome da tag que queremos modificar mudamos a cor desse site assim:</p>
+
+    <pre>
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="shortcut icon" href="favicon.curso.ico" type="image/x-icon"&gt;
+            &lt;title>Estilos locais/Internos&lt;/title&gt;
+            <strong>
+                &lt;style&gt;
+                    body{
+                        background-color: rgb(129, 212, 212);
+                    }
+                &lt;/style&gt;
+            </strong>
+        &lt;/head&gt;
+    </pre>
+    <p>Repare que a tag style, dentro dela usamos um seletor body, que tem o mesmo nome da tag que queremos modificar, abrimos chaves e dentro dela vamos colocar as declarações que são o connjunto de propriedade(no caso é background-color) e valor(rgb 171,212,212) e no final colocamos ";". podemos usar vários seletores dentro de uma mesma tag style, só colocar um embaixo do outro, se colocar que a tag h1 vai ser vermelha todas ficam sem precisar ir de tag em tag. </p>
+
+    <h2>Vamos Brincar</h2>
+    <h3>Olá</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam veniam quos doloremque fuga quisquam repudiandae ratione, doloribus molestiae? Maxime tempore obcaecati incidunt, quae et ad. Cupiditate sit repellat iure cumque!</p>
+    <h3>Hello</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, optio blanditiis obcaecati eligendi cum accusantium quos, delectus doloribus amet et qui corrupti ad. Beatae facilis perspiciatis non eum voluptatem nam!</p>
+    <h3>Oi</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non quaerat nobis commodi nulla porro odio unde laboriosam, veniam iste debitis corporis suscipit ab nihil voluptas. Architecto consequatur vel itaque.</p>
+
+    <h2>Observações</h2>
+    <p>Se você está fazendo uma página simples que precisa de mudanças locais use essa técnica, mas se tiver muitas páginas vamos usar os estilos externos</p>
+    <h3>Desvantagens</h3>
+    <p>O estilo ocupa mais espaço que o conteúdo, então você vai abrir o arquivo para mudar algo no body por exemplo e aí tu vai que descer tudo para conseguir mexer na corpo. E se tiver muitas páginas vai ter qu e copiar e colar o código, se tiver que mudar um seletor vai ter que ir de página em página. Logo, essa técnica serve para quando se tem só uma página.</p>
+</body>
+</html>

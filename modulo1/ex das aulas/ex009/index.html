@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.curso.ico" type="image/x-icon">
+    <title>Listas</title>
+    <style>
+        mark{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listas OL e UL</h1>
+    <p>Listas são muito utilizadas pricipalmente nos menus de sites.</p>
+
+    <h2>Listas OL (Listas Ordenadas)</h2>
+    <p>São aquelas que a ordem importa, a tag é <strong>
+        <en>&lt;OL&gt;</en></strong>, antes de escrever os itens tu vai usar a tag <en>LI</en> (list), que vai estar dentro da <ins>tag OL</ins>, é na tag LI que você coloca os itens, pra cada item você vai fazer uma tag LI.</p>
+    <ol>
+        <li>Acordar</li>
+        <li><del>Arrumar a cama</del></li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        
+    </ol>
+    <h3>Personalizando listas ordenadas</h3>
+    <p>Podemos personalizar as listas colocando o parâmetro type, que nos dará cinco opçoes de formatação (a primeira já vimos, é a padrão):</p>
+    <h4>2- A (Ordenadas por letras Maiúculas, a outra é o "a" minúsculo)</h4>
+    <h5>Receita de chá</h5>
+    <ol type="A">
+        <li>Ligue o fogo</li>
+        <li>Espere a água ferver</li>
+        <li>Ao ferver apague</li>
+        <li>Jogue as folhas</li>
+        <li>Tampe</li>
+        <li>Deixe em efusão por 10min</li>
+    </ol>
+    <h4>4- I (algarismos romanos, o último é o "i" minúsculo)</h4>
+    <h5>Abdominais</h5>
+    <ol>
+        <li>Deite-se</li>
+        <li>Mãos atrás da cabeça</li>
+        <li>Contraía do músculos abdominais na subida enquando expira</li>
+        <li>Descontraia controladamente na descida enquanto inspira</li>
+    </ol>
+
+    <p>Você também pode querer que a lista começe de uma ordem especifica para isso você tem o parâmetro start="". EX:</p>
+    <ol type="A" start=2>
+        <li>Acordar</li>
+        <li>Arrumar a cama</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        
+    </ol>
+    <p>OBS: O start só lê números então se quiser que, por exmplo o Type="A" Começe pelo B, voce tem que colocar assim: <em><ins>Type="A" Start=2</ins></em>.</p>
+
+    <hr>
+
+    <h2>Lista não Ordenadas</h2>
+    <p>São listas nas quais a ordem não importa.</p>
+    <h4>Lista de compras</h4>
+
+    <ul>
+        <li>Pão</li>
+        <li>Manteiga</li>
+        <li>Sabão</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+    <p>Elas também podem ser personalizadas com o parâmetro type, só testar, escreva dentro dos parênteses do type disc, circle ou square(são os estilos disponíveis).</p>
+    <hr>
+    <h2>Listas Mistas</h2>
+    <p>Quando mesclamos a OL com a UL</p>
+    <h3>OL dentro de OL</h3>
+    <h4>Meus jogos de terror preferidos</h4>
+    <ol type="A">
+        <li>PS3</li>
+        <ol>
+            <li>Alien Isolation</li>
+            <li>The Evil Wthin</li>
+            
+        </ol>
+        <li>PS2</li>
+        <ol>
+            <li>Resident Evil Code Veronica</li>
+            <li>Obscure 1</li>
+            <li>Clock Tower 3</li>
+        </ol>
+    </ol>
+    <p>Perceba que aninamos uma lista dentro da outra</p>
+    <h3>OL dentro de Ul</h3>
+    <h4>Comidas preferidas</h4>
+    <ol>
+        <li>Doces</li>
+        <ul>
+            <li>Sorvete</li>
+            <li>Empada</li>
+            <li>Chocolate meio amargo</li>
+        </ul>
+        <li>Salgadas</li>
+        <ul>
+            <li>Pizza</li>
+            <li>Pastel</li>
+            <li>Hamburguer</li>
+        </ul>
+
+    </ol>
+    <h3>Lista dentro de lista dentro de outra lista</h3>
+    <h4>Jogos</h4>
+    <ul>
+        <li>PS1</li>
+        <ol>
+            <li>Terror</li>
+            <ul type="circle">
+                <li>Resident evil</li>
+                <li>Silent Hill</li>
+            </ul>
+            <li>Aventura</li>
+            <ul type="circle">
+                <li>Crash</li>
+                <li>Metal Slug</li>
+            </ul>
+        </ol>
+        <li>Ps2</li>
+        <ol>
+            <li>Terror</li>
+            <ul type="circle">
+                <li>Resident Evil Code Verônica</li>
+                <li>Silent Hill 2</li>
+                <li>Clock Tower 3</li>
+            </ul>
+            <li>Aventura</li>
+            <ul type="circle">
+                <li>Kingdom Hearts</li>
+                <li>Justice league Heroes</li>
+            </ul>
+        </ol>
+    </ul>
+    <hr>
+    <h2>Lista de Definição</h2>
+    <p>É menos utilizada que as outras.</p>
+    <p>Como funciona:Use a tag dl dentro dela você ria digitar a tag dt (que é o termo) e dd (descrição do termo)</p>
+    <dl>
+        <dt><abbr title="Hypertext markup language">HTML</abbr></dt>
+        <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd>
+        <dt><abbr title="Cascading style sheets">CSS</abbr></dt>
+        <dd>Linguagem de marcação para estilização de um site.</dd>
+        <dt><abbr title="Linguagem de programação">JavaScript</abbr></dt>
+        <dd>Linguagem de programação para interatividade de um site.</dd>
+    </dl>
+    
+
+    OBS: Um macete legal: pressionando a tecla Alt clique no lugares que quer, assim vai conseguir escrever uma coisa em varias linhas ao mesmo tempo.
+</body>
+</html>

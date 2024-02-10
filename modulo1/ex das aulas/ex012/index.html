@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Vídeos</h1>
+    <h2>Sobre vídeos no HTML5</h2>
+    <p>No site Pixels você consegue baixar imagens e vídeos gratuitos.</p>
+    <p>Os formatos suportados pelos navegadores geralmente são: MP4,OGV, M4V e WEBM.</p>
+    <p>Um dica para diminuir vídeos grandes. Use o programa <strong>HandBrake</strong> ele pode mudar o formato dos seus vídeos(MP4,OGV(esse é o único que não está disponível), M4V ou WEBM) tbm e adequar ele para ser utilizado em Web. Temos que criar vídeos em vários formatos pois navegadores tem compatibilidades diferentis com formatos de arquivo diferentes.</p>
+    <p><strong>Cuidado com os Custos:</strong></p>
+    <p>Se você colocar uma qualidade muito grande da imagem, o plano de hospedagem mensal fica mais caro, se o cliente pedir hospensagem local piora a situação, pq a conta vai pra tu acho. Acima de 1080p não hospede nada no seu site.</p>
+
+    <h2>Inserindo vídeos</h2>
+    <p>Crie a tag video e depois coloque as tags source dentro, o resto segue os  principios de inserir audio.</p>
+    <video width="560" poster="imagens/foto-p.png" controls>
+        <source src="videos/pexels-darlene-alderson-7040123.mp4" type="video/mp4">
+        <source src="videos/pexels-darlene-alderson-7040123.webm" type="video/webm">
+        <source src="videos/pexels-darlene-alderson-7040123.m4v" type="video/m4v">
+        <source src="videos/pexels-darlene-alderson-7040123.ogv" type="video/ogv">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeo.</p>
+    </video>
+    <p>Use os parêmetros Width="500"(É a largura d vídeo, coloque em 500 pois é um bom tamanho, mas tu que escolhe), poster=""(Nessa você usa uma imagem para servir de capa para o vídeo, mas tem que ser do mesmo tamanho se não fica um negócio doido kkkkk) e controls, pode usar parâmetros como loop e autoplay tbm.</p>
+    <h2>Cuidado! custo de hospedagem local</h2>
+    <p>Nós colocamos Vários sourcescom vários formatos de arquivo como podemos ver:</p>
+    <pre>
+        &lt;video width="500" poster="imagens/foto-p.png" controls&gt;
+            &lt;source src="videos/pexels-darlene-alderson-7040123.mp4" type="video/mp4"&gt;
+            &lt;source src="videos/pexels-darlene-alderson-7040123.webm" type="video/webm"&gt;
+            &lt;source src="videos/pexels-darlene-alderson-7040123.m4v" type="video/m4v"&gt;
+            &lt;source src="videos/pexels-darlene-alderson-7040123.ogv" type="video/ogv"&gt;
+            &lt;p>Seu navegador não tem compatibilidade com reprodução de vídeo.&lt;/p%gt;
+        &lt;/video&gt;
+    </pre>
+    <p>Isso é bom pois permite que mais aparelhos tenham compatibilidade, mas é ruim também pois encaresse o valor da hospedagem a depender do arquivo que seja utilizado, por exemplo o fomato Ogv está muito pesado, se muitas pessoas acessarem um dispositivo que é compativel só com esse formato teremos um problema, se o cliente quiser que o vídeo fique hospedado no site dele vai ficar caro para ele, se hospedar com você vai ficar caro pra tu</p>
+    <p><strong>OU SEJA: USAR A TAG VÌDEO PODE GERAR ALTOS CUSTOS</strong></p>
+    <p>Vejamos uma outra técnica que não trará muitos prejuízos</p>
+    <h2>Incorporação de vídeos externos</h2>
+    <h3>Do youtube</h3>
+    <p>Vai no vídeo que quer clica em compartilhar, vai em incorporar, ele vai montar um código html e aí tu copia e cola</p>
+    <p>Quando o vídeo é do youtube consome muito pouco, ou nada, então o custo é menor. então o recomendado é que seu cliente tenha um canal no youtube e poste os vídeos lá.</p>
+    <p>Sobre direitos autorias, use vídeos próprios ou livres</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LW0bhKitRBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h3>Vimeo</h3>
+    <p>No vimeo tu pode limitar quem acessa seus vídeos, lá tu pode copiar e coloar aqui tbm se o autor deixou livre.</p>
+</body>
+
+</html>

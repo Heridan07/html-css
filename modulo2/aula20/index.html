@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.curso.ico" type="image/x-icon">
+    <title>Aula Vinte</title>
+</head>
+<body>
+    <div id="caixa1">
+        <h1 class="cabeçalho">Aula Vinte</h1>
+    </div>
+    <main>
+        <div id="caixa2">
+
+            <h2>1ª) Pseudo-classe:</h2>
+            <div class="
+            caixa3"><p>0</p></div>
+            <div class="
+            caixa3"><p>1</p></div>
+            <div class="
+            caixa3"><p>2</p></div>
+            <p>Pseudo-classes devem estar relacionadas a um elemento ou a uma classe, são representadas por ":" e estão relacionadas ao estado de um elemento ou de uma classe(se está marcado, ativo, se o mouse passou em cima etc)</p>
+            <h3>Exemplo de aplicação:</h3>
+            <h4>1-Pseudo-classe hover:</h4>
+            <p>Essa Pseudo-classe é ativada quando o mouse passa por cima de algum elemento ou classe, ex:</p>
+            <pre>
+                .caixa3:hover{ 
+                    background-color: blueviolet;
+                }
+                
+            </pre>
+            <p>Basicamente, ao passar o mause em cima da classe "caixa3" ela irá assumir a cor violeta, faça o texte, existem tres quadrados coloridos acima dessa página, elas estão associadas á classe "caixa3".</p>
+
+            <h4>2-Texto escondido:</h4>
+                <p>Passe o mouse sobre o texto abaixo</p>
+                <div class="container">
+                    PASSE O MOUSE AQUI!
+                    <p>Ado Ado Ado quem leu é viado!</p>
+                </div>
+
+                <h5>O que está acontecendo:</h5>
+
+                <p>Criamos uma div asoociada a uma classe "container", logo após criamos um texto "Passe o mouse aqui" e também criamos um paragrafo, temos que saber que tudo que está dentro de uma div (seja main, header ou footer, é sua child(criança)) para mexermos em algo especifico dentro de uma div, ou seja para mexermos na sua child colocamos no css após o nome da div ou sa classe associada a ela o sinal de ">", que simboliza que tudo o que vem depois desse sinal é sua child, e sofrerá o efeito desejado, Veja o exemplo abaixo:</p>
+        
+                <pre>
+
+                .container > p{
+                        display: none;
+                    }
+                    
+                </pre>
+
+                <p>Observe que "p" é child de "container", logo "p" sofrera o efeito da delcaração, no caso <code>"display:none;"</code> , que faz com que tudo o que está contido em "p" desapareça, agora observe o próximo código:</p>
+
+                <pre>
+                    .container:hover > p{
+                        display: block;
+                        color: red;
+                        font-size:medium;
+                    }
+                </pre>
+                <p>Nele temos a pseudoclasse hover que indica que ao passarmos uo mouse em cima da div irá disparar um efeito descrito nnas delcarações, um deles é o <code>"display: block;"</code> que tem o efeito oposto do <code>"display:none;"</code>, se em <code>"display:none;"</code> o texto se esconde, em <code>"display:block;"</code> ele reaparece novamente mas só ao enquanto o mouse etiver em cima.</p>
+                <p>OBS: procure saber mais sobre as pseudoclasses visited e active e sua relação com links.</p>
+
+
+           
+
+            <hr>
+            <h2>2ª) Pseudo-elementos:</h2>
+            <p>Pode ser usado nas classes, nos elemtnos no id, mexe diretamente noconteúdo periférico dos elementos, representado po "::". A seguir teremos exemplos de aplicação:</p>
+
+            <a href="https://www.anroll.net/a/8O9dCOWJ3t">Assista animes aqui!</a>
+
+            <p>Colocamos a sinalização "[Link]" no final do Link:</p>
+
+            <pre>
+                a::after{
+                    content: " [link]";
+                    color: darkgray;
+                 }
+            </pre>
+
+            <p>O pseudoelemento after diz que após cada link algo vai acontecer, no caso usamos o content(que sgnifica conteúdo) para coloclar uma palavra no final de cada link, tem o pseudoelemento after também.</p>
+            
+        </div>
+        
+
+    </main>
+</body>
+</html>

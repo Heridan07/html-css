@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+body{
+    margin:0px;
+}
+
+#cabeçalho1{
+
+    background-color: rgb(253, 239, 208);
+    padding: 10px;
+  
+}
+
+#titulo1{
+
+    text-align: center;
+    padding:5px 5px 10px 15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(246, 198, 126);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.485);
+}
+
+#main1{
+    padding: 10px;
+    background-color: rgb(233, 198, 187);
+    margin: auto;
+}
+
+#div1{
+    background-color: rgb(252, 249, 249);
+    padding: 10px;
+    border-radius: 2px;
+    text-indent: 10px;
+}
+
+#exemplo{
+
+    max-width: 100px;
+
+    outline: 5px;
+    outline-style: dashed ;
+    outline-color:blue;
+    border-style: solid;
+}
+
+#cabeçalho2{
+    background-color: rgb(193, 150, 234);
+    padding: 10px;
+   
+
+}
+
+#titulo2{
+    text-align: center;
+    
+    
+}
+
+#main2{
+    background: rgb(250, 194, 204);
+    padding: 10px;
+
+}
+
+#div2{
+    background-color: white;
+    padding: 10px;
+    text-indent: 10px;
+    border-radius: 2px;
+}
+
+#bola{
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(165, 105, 221);
+}
+
+#bola>p{
+    text-align: center;
+    padding: 36px 32px 18px 20px;
+    font-weight: 700;
+    display: none;
+    color: red;
+}
+
+#bola:hover>p{
+    display: block;
+
+}
